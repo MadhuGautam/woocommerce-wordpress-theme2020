@@ -7,6 +7,7 @@
     <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
     <!-- font-awesome icons -->
 	<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/fontawesome-all.min.css" rel="stylesheet">
+
    
     <?php wp_head(); ?>
    
