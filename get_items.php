@@ -1,11 +1,10 @@
 <?php
-require_once("../../../wp-load.php");
 
-$ser = $_REQUEST['ser_id'];
-$cat = $_REQUEST['cat_id'];
-global $wpdb;
-$item_list = $wpdb->get_results("SELECT * FROM `wp_get_items_list` WHERE `category_id`=".$ser." and `service_id`=".$cat);
-    echo "<div class='row pb-2'>";
+$data = $_REQUEST['data'];
+
+$item_list = json_decode( html_entity_decode( stripslashes ($data) ) );
+
+echo "<div class='row pb-2'>";
     foreach($item_list as $item){
         
         echo "
@@ -22,6 +21,4 @@ $item_list = $wpdb->get_results("SELECT * FROM `wp_get_items_list` WHERE `catego
 
 ?>
 
-
-
-
+    

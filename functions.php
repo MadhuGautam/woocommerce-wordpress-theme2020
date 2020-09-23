@@ -1,4 +1,5 @@
 <?php
+    
 
     function load_stylesheets()
     {
@@ -89,5 +90,14 @@
         }
         
         add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
+    
+        // function get_all_items_from_db($data){
+
+        //     //echo "<h1>fhsghbs</h1>";
+        //      prtnt_r($data); //or $data['name'];
+        // }
+
+        // add_action('get_items','get_all_items_from_db');
 
 ?>
